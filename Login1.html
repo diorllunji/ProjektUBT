@@ -1,67 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-	<link rel="stylesheet" href="stylet1.css">
-	<title>Login form</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form </title>
+  <link rel="stylesheet" href="stylet1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
 <body>
-	
-	<div class="container">
-		<form action="C:\Users\PULSE Electronics\Documents\Inxhinieri e web\Home.html" class="login active">
-			<h2 class="title">Kyçu me llogarinë tënde</h2>
-			<div class="form-group">
-				<label for="email">Email</label>
-				<div class="input-group">
-					<input type="email" id="email" placeholder="Email address">
-					<i class='bx bx-envelope'></i>
-				</div>
-			</div>
-			<div class="form-group">
-				<label for="password">Password</label>
-				<div class="input-group">
-					<input type="password" pattern=".{8,}" id="password" placeholder="Your password">
-					<i class='bx bx-lock-alt' ></i>
-				</div>
-				<span class="help-text">Së paku 8 karaktere</span>
-			</div>
-			<button type="submit" class="btn-submit">Login</button>
-			<a href="#">Keni harruar passwordin?</a>
-			<p>Nuk kam një llogari. <a href="#" onclick="switchForm('register', event)">Regjistrohu</a></p>
-		</form>
+  <div class="wrapper">
+    <header>Login Form</header>
+    <form action="C:\Users\PULSE Electronics\Documents\Inxhinieri e web\Home.html">
+      <div class="field email">
+        <div class="input-area">
+          <input type="text" placeholder="Email Address">
+          <i class="icon fas fa-envelope"></i>
+          <i class="error error-icon fas fa-exclamation-circle"></i>
+        </div>
+        <div class="error error-txt">Email nuk bën të jetë zbrazët</div>
+      </div>
+      <div class="field password">
+        <div class="input-area">
+          <input type="password" placeholder="Password">
+          <i class="icon fas fa-lock"></i>
+          <i class="error error-icon fas fa-exclamation-circle"></i>
+        </div>
+        <div class="error error-txt">Password nuk bën të jetë zbrazët</div>
+      </div>
+      <div class="pass-txt"><a href="#">Keni harruar passwordin?</a></div>
+      <input type="submit" value="Login">
+    </form>
+    <div class="sign-txt">Nuk jeni anëtar? <a href="C:\Users\PULSE Electronics\Documents\Inxhinieri e web\Signup.html">Regjistrohu</a></div>
+  </div>
 
-		<form action="C:\Users\PULSE Electronics\Documents\Inxhinieri e web\Home.html" class="register">
-			<h2 class="title">Regjistro llogarinë tënde</h2>
-			<div class="form-group">
-				<label for="email">Email</label>
-				<div class="input-group">
-					<input type="email" id="email" placeholder="Email address">
-					<i class='bx bx-envelope'></i>
-				</div>
-			</div>
-			<div class="form-group">
-				<label for="password">Password</label>
-				<div class="input-group">
-					<input type="password" pattern=".{8,}" id="password" placeholder="Your password">
-					<i class='bx bx-lock-alt' ></i>
-				</div>
-				<span class="help-text">Së paku 8 karaktere</span>
-			</div>
-			<div class="form-group">
-				<label for="confirm-pass">Konfirmo passwordin</label>
-				<div class="input-group">
-					<input type="password" id="confirm-pass" placeholder="Enter password again">
-					<i class='bx bx-lock-alt' ></i>
-				</div>
-				<span class="help-text">Passwordi duhet të jetë i njëjtë</span>
-			</div>
-			<button type="submit" class="btn-submit">Regjistrohu</button>
-			<p>Kam një llogari. <a href="#" onclick="switchForm('login', event)">Kyçu</a></p>
-		</form>
-	</div>
+  <script src="login3.js"></script>
 
-	<script src="login3.js"></script>
 </body>
 </html>
